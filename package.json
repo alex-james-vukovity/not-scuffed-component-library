@@ -1,6 +1,7 @@
 {
   "name": "not-scuffed-component-library",
-  "author": "Alex James",
+  "author": "Alex James Vukovity",
+  "description": "React component library",
   "version": "0.6.0",
   "dependencies": {
     "@storybook/addon-actions": "^6.1.21",
@@ -58,7 +59,6 @@
       "last 1 safari version"
     ]
   },
-  "description": "React component library",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alex-james-vukovity/not-scuffed-component-library.git"
