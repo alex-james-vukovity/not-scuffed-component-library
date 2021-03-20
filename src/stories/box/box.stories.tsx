@@ -4,17 +4,14 @@ import { Box, Theme } from 'stories'
 
 export default {
   title: 'Box',
-  component: Box
+  component: Box,
+  decorators: [
+    (Story) => (
+      <Theme>
+        <Story />
+      </Theme>
+    )
+  ]
 } as Meta
 
-export const Default: VFC = () => (
-  <Theme>
-    <Box>Hey im default div element</Box>
-  </Theme>
-)
-
-export const Section: VFC = () => (
-  <Theme>
-    <Box as="section">Hey im proped section element</Box>
-  </Theme>
-)
+export const Default: VFC = () => <Box>Hey im default div element</Box>
