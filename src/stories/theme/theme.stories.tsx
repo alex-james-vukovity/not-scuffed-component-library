@@ -1,4 +1,5 @@
-import { Story, Meta } from '@storybook/react/types-6-0'
+import { VFC } from 'react'
+import { Meta } from '@storybook/react/types-6-0'
 import { Theme } from 'stories'
 
 export default {
@@ -6,9 +7,4 @@ export default {
   component: Theme
 } as Meta
 
-const Template: Story = (args) => <Theme {...args} />
-
-export const Default = Template.bind({})
-Default.args = {
-  children: 'Hey I am Theme Provider'
-}
+export const Default: VFC = () => <Theme>Hey im theme provider</Theme>

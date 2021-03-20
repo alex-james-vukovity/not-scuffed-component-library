@@ -1,4 +1,5 @@
-import { Story, Meta } from '@storybook/react/types-6-0'
+import { VFC } from 'react'
+import { Meta } from '@storybook/react/types-6-0'
 import { Box, Theme } from 'stories'
 
 export default {
@@ -6,19 +7,14 @@ export default {
   component: Box
 } as Meta
 
-const Template: Story = (args) => (
+export const Default: VFC = () => (
   <Theme>
-    <Box {...args} />
+    <Box>Hey im default div element</Box>
   </Theme>
 )
 
-export const Default = Template.bind({})
-Default.args = {
-  children: 'Hey I am Default div element'
-}
-
-export const Section = Template.bind({})
-Section.args = {
-  children: 'Hey I am proped Section element',
-  as: 'section'
-}
+export const Section: VFC = () => (
+  <Theme>
+    <Box as="section">Hey im proped section element</Box>
+  </Theme>
+)

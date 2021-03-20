@@ -1,12 +1,8 @@
 import { render, screen } from '@testing-library/react'
-import { Box, Theme } from 'stories'
+import { Theme } from 'stories'
 
 test('should render the component', () => {
-  render(
-    <Theme>
-      <Box>Test</Box>
-    </Theme>
-  )
+  render(<Theme>Test</Theme>)
 
   const component = screen.getByText('Test')
 
