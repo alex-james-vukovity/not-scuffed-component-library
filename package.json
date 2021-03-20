@@ -1,5 +1,6 @@
 {
   "name": "not-scuffed-component-library",
+  "author": "Alex James",
   "version": "0.1.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
