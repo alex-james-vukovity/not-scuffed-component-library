@@ -11,5 +11,4 @@ test('should render the component', () => {
   const component = screen.getByText('Test')
 
   expect(component).toBeInTheDocument()
-  expect(component).toContainHTML('div')
 })

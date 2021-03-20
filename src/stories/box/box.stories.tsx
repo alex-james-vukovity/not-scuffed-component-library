@@ -1,7 +1,5 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
-
-import { Box } from './box'
-import { Theme } from '../theme'
+import { Box, Theme } from 'stories'
 
 export default {
   title: 'Box',
@@ -14,13 +12,13 @@ const Template: Story = (args) => (
   </Theme>
 )
 
-export const Div = Template.bind({})
-Div.args = {
-  children: 'Hey I am Div'
+export const Default = Template.bind({})
+Default.args = {
+  children: 'Hey I am Default div element'
 }
 
 export const Section = Template.bind({})
 Section.args = {
-  children: 'Hey I am Section',
+  children: 'Hey I am proped Section element',
   as: 'section'
 }
