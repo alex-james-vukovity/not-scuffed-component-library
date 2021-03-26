@@ -1,4 +1,3 @@
-import { FC } from "react"
 import styled from "styled-components/macro"
 import {
   space,
@@ -11,7 +10,7 @@ import {
 } from "styled-system"
 import { __DEV__ } from "utils"
 
-export const Flex = styled.div<FC>(
+export const Flex = styled.div(
   {
     display: "flex",
   },
