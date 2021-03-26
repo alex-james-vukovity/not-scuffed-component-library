@@ -41,6 +41,7 @@
     "sb": "start-storybook -p 6006 -s public",
     "build-sb": "build-storybook -s public",
     "test": "react-scripts test",
+    "test-once": "react-scripts test --watchAll=false",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format-check": "prettier --check .",
