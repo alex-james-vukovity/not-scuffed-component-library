@@ -18,3 +18,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 ### `npm run lint`
 
 Checks the code for syntax errors
+
+### `npm run release`
+
+Publishes a new semantic version
