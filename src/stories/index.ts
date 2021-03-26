@@ -1,2 +1,2 @@
-export { Box } from './box'
-export { Theme } from './theme'
+export * from './box'
+export * from './theme'
