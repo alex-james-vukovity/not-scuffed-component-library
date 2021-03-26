@@ -42,19 +42,6 @@
     "lint": "eslint --ext=ts,tsx ./src",
     "release": "np"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "prettier": {
-    "tabWidth": 2,
-    "semi": false,
-    "singleQuote": true,
-    "printWidth": 100,
-    "trailingComma": "none"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
