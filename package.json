@@ -1,13 +1,35 @@
 {
   "name": "not-scuffed-component-library",
-  "author": "Alex James Vukovity",
-  "description": "React component library",
   "version": "0.6.2",
-  "license": "ISC",
+  "description": "React component library",
   "homepage": "https://github.com/alex-james-vukovity/not-scuffed-component-library#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alex-james-vukovity/not-scuffed-component-library.git"
+  },
+  "license": "ISC",
+  "author": "Alex James Vukovity",
+  "scripts": {
+    "sb": "start-storybook -p 6006 -s public",
+    "build-sb": "build-storybook -s public",
+    "test": "react-scripts test",
+    "test-once": "react-scripts test --watchAll=false",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format-check": "prettier --check .",
+    "release": "np"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "dependencies": {
     "react": "^17.0.1",
@@ -30,33 +52,11 @@
     "@types/styled-components": "^5.1.9",
     "babel-plugin-styled-components": "^1.12.0",
     "eslint-config-prettier": "^8.1.0",
-    "styled-components": "^5.2.1",
     "husky": "^5.2.0",
     "np": "^7.4.0",
     "prettier": "^2.2.1",
     "react-scripts": "4.0.3",
+    "styled-components": "^5.2.1",
     "typescript": "^4.2.3"
-  },
-  "scripts": {
-    "sb": "start-storybook -p 6006 -s public",
-    "build-sb": "build-storybook -s public",
-    "test": "react-scripts test",
-    "test-once": "react-scripts test --watchAll=false",
-    "lint": "eslint .",
-    "format": "prettier --write .",
-    "format-check": "prettier --check .",
-    "release": "np"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   }
 }
