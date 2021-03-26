@@ -2,8 +2,10 @@ import { FC } from "react"
 import styled from "styled-components/macro"
 import { __DEV__ } from "utils"
 
-export const Box = styled.div<FC>``
+export const Flex = styled.div<FC>`
+  display: flex;
+`
 
 if (__DEV__) {
-  Box.displayName = "Box"
+  Flex.displayName = "Flex"
 }
