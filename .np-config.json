@@ -1,5 +1,6 @@
 {
   "yarn": false,
   "anyBranch": true,
-  "tests": false
+  "tests": false,
+  "releaseDraft": false
 }
