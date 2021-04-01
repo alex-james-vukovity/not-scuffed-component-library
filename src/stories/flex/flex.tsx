@@ -10,18 +10,17 @@ import {
 } from "styled-system"
 import { __DEV__ } from "utils"
 
-export const Flex = styled.div(
-  {
-    display: "flex",
-  },
-  space,
-  layout,
-  color,
-  border,
-  position,
-  shadow,
-  flexbox
-)
+export const Flex = styled.div`
+  display: flex;
+
+  ${space};
+  ${layout};
+  ${color};
+  ${border};
+  ${position};
+  ${shadow};
+  ${flexbox};
+`
 
 if (__DEV__) {
   Flex.displayName = "Flex"
