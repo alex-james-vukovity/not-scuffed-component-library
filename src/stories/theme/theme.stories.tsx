@@ -1,4 +1,3 @@
-import { VFC } from "react"
 import { Meta } from "@storybook/react/types-6-0"
 import { Theme } from "stories"
 
@@ -7,4 +6,4 @@ export default {
   component: Theme,
 } as Meta
 
-export const Default: VFC = () => <Theme>Hey im theme provider</Theme>
+export const Default = () => <Theme>Hey im theme provider</Theme>

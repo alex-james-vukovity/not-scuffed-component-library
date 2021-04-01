@@ -1,4 +1,3 @@
-import { VFC } from "react"
 import { Meta } from "@storybook/react/types-6-0"
 import { Flex, Theme } from "stories"
 
@@ -14,4 +13,4 @@ export default {
   ],
 } as Meta
 
-export const Default: VFC = () => <Flex>Hey im default div element</Flex>
+export const Default = () => <Flex>Hey im default div element</Flex>

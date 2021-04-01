@@ -1,8 +1,10 @@
 import styled from "styled-components/macro"
 import { space, layout, position } from "styled-system"
-import { __DEV__ } from "utils"
+import { __DEV__, ComponentProps } from "utils"
 
-export const Button = styled.button`
+const Button = styled.button.attrs(({ disabled, onClick }) => ({
+  onClick: disabled ? undefined : onClick,
+}))`
   padding: 8px 16px;
   background-color: white;
   border: 2px solid black;
@@ -13,7 +15,7 @@ export const Button = styled.button`
   }
 
   ::disabled {
-    cursor: pointer;
+    cursor: not-allowed;
     border: 2px solid #dedede;
   }
 
@@ -25,3 +27,6 @@ export const Button = styled.button`
 if (__DEV__) {
   Button.displayName = "Button"
 }
+
+export type ButtonProps = ComponentProps<typeof Button>
+export { Button }

@@ -8,9 +8,9 @@ import {
   shadow,
   flexbox,
 } from "styled-system"
-import { __DEV__ } from "utils"
+import { __DEV__, ComponentProps } from "utils"
 
-export const Flex = styled.div`
+const Flex = styled.div`
   display: flex;
 
   ${space};
@@ -25,3 +25,6 @@ export const Flex = styled.div`
 if (__DEV__) {
   Flex.displayName = "Flex"
 }
+
+export type FlexProps = ComponentProps<typeof Flex>
+export { Flex }
