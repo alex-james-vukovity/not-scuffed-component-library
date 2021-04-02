@@ -1,9 +1,9 @@
 import { Meta } from "@storybook/react/types-6-0"
-import { Button, Theme } from "stories"
+import { ButtonBase, Theme } from "stories"
 
 export default {
-  title: "Button",
-  component: Button,
+  title: "ButtonBase",
+  component: ButtonBase,
   decorators: [
     (Story) => (
       <Theme>
@@ -13,8 +13,18 @@ export default {
   ],
 } as Meta
 
-export const Default = () => <Button>Hey im default button</Button>
+export const Small = () => (
+  <ButtonBase variant="small">Hey am small button</ButtonBase>
+)
 
-export const Submit = () => <Button type="submit">Hey im submit button</Button>
+export const Medium = () => (
+  <ButtonBase variant="medium">Hey am medium button</ButtonBase>
+)
 
-export const Disabled = () => <Button disabled>Hey im disabled button</Button>
+export const Large = () => (
+  <ButtonBase variant="large">Hey am large button</ButtonBase>
+)
+
+export const Disabled = () => (
+  <ButtonBase disabled>Hey am disabled button</ButtonBase>
+)

@@ -1,27 +1,83 @@
 import styled from "styled-components/macro"
-import { space, layout, position } from "styled-system"
+import {
+  compose,
+  space,
+  layout,
+  position,
+  color,
+  display,
+  shadow,
+  border,
+  background,
+  typography,
+  variant,
+} from "styled-system"
 import { __DEV__, ComponentProps } from "utils"
+
+const variants = variant({
+  variants: {
+    small: {
+      padding: "4px 12px",
+      fontSize: 0,
+    },
+    medium: {
+      fontSize: 1,
+    },
+    large: {
+      padding: "10px 20px",
+      fontSize: 2,
+    },
+  },
+})
+
+interface Props {
+  variant?: "small" | "medium" | "large"
+}
 
 const ButtonBase = styled.button.attrs(({ disabled, onClick }) => ({
   onClick: disabled ? undefined : onClick,
-}))`
-  padding: 8px 16px;
-  background-color: white;
-  border: 2px solid black;
+}))<Props>`
+  position: relative;
+  display: inline-block;
+  padding: 6px 16px;
+  font-family: inherit;
+  white-space: nowrap;
+  vertical-align: middle;
   cursor: pointer;
+  user-select: none;
+  appearance: none;
+  text-decoration: none;
+  text-align: center;
 
-  ::focus {
-    outline: 2px solid black;
+
+  &:hover {
+    text-decoration: none;
   }
 
-  ::disabled {
-    cursor: not-allowed;
-    border: 2px solid #dedede;
+  &:focus {
+    outline: none;
   }
 
-  ${space};
-  ${layout};
-  ${position};
+  &:disabled {
+    cursor: default;
+  }
+
+  &:disabled svg {
+    opacity: 0.6;
+  }
+
+  ${compose(
+    space,
+    layout,
+    position,
+    color,
+    display,
+    shadow,
+    border,
+    background,
+    typography
+  )}
+  ${variants}
 `
 
 if (__DEV__) {
