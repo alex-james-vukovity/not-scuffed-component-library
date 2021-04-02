@@ -1,14 +1,14 @@
 import { render, screen } from "@testing-library/react"
-import { ButtonBase, Theme } from "stories"
+import { ButtonDanger, Theme } from "stories"
 
 test("should render the component", () => {
   render(
     <Theme>
-      <ButtonBase>button base</ButtonBase>
+      <ButtonDanger>button danger</ButtonDanger>
     </Theme>
   )
 
-  const component = screen.getByText("button base")
+  const component = screen.getByText("button danger")
 
   expect(component).toBeInTheDocument()
   expect(component).toContainHTML("button")
