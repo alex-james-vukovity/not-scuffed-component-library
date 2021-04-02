@@ -21,4 +21,4 @@ Checks the code for syntax errors
 
 ### `npm run release`
 
-Publishes a new semantic version
+Publishes a new semantic version to npmjs.com and pushes tags to github
