@@ -7,11 +7,6 @@ body {
   font-family: ${theme.fonts.normal};
   box-sizing: border-box;
 }
-input,
-textarea,
-button {
-  font-family: inherit;
-}
 code {
   font-family: ${theme.fonts.mono};
 }
