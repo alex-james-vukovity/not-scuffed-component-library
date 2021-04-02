@@ -14,7 +14,7 @@ import {
 } from "styled-system"
 import { __DEV__, ComponentProps } from "utils"
 
-const variants = variant({
+const sizes = variant({
   variants: {
     small: {
       padding: "4px 12px",
@@ -24,7 +24,7 @@ const variants = variant({
       fontSize: 1,
     },
     large: {
-      padding: "10px 20px",
+      padding: "10px 24px",
       fontSize: 2,
     },
   },
@@ -39,7 +39,6 @@ const ButtonBase = styled.button.attrs(({ disabled, onClick }) => ({
 }))<Props>`
   position: relative;
   display: inline-block;
-  padding: 6px 16px;
   font-family: inherit;
   white-space: nowrap;
   vertical-align: middle;
@@ -48,7 +47,13 @@ const ButtonBase = styled.button.attrs(({ disabled, onClick }) => ({
   appearance: none;
   text-decoration: none;
   text-align: center;
-
+  border-style: solid;
+  padding: ${({ theme }) => theme.space[2]} ${({ theme }) => theme.space[3]};
+  border-width: ${({ theme }) => theme.borderWidths[1]};
+  border-radius: ${({ theme }) => theme.radius[2]};
+  font-weight: ${({ theme }) => theme.fontWeights.bold};
+  line-height: ${({ theme }) => theme.lineHeight[0]};
+  box-shadow: ${({ theme }) => theme.shadow.medium};
 
   &:hover {
     text-decoration: none;
@@ -62,10 +67,6 @@ const ButtonBase = styled.button.attrs(({ disabled, onClick }) => ({
     cursor: default;
   }
 
-  &:disabled svg {
-    opacity: 0.6;
-  }
-
   ${compose(
     space,
     layout,
@@ -77,7 +78,7 @@ const ButtonBase = styled.button.attrs(({ disabled, onClick }) => ({
     background,
     typography
   )}
-  ${variants}
+  ${sizes}
 `
 
 if (__DEV__) {

@@ -2,7 +2,7 @@ import { Meta } from "@storybook/react/types-6-0"
 import { Box, Theme } from "stories"
 
 export default {
-  title: "Box",
+  title: "Layout/Box",
   component: Box,
   decorators: [
     (Story) => (

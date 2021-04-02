@@ -2,7 +2,7 @@ import { Meta } from "@storybook/react/types-6-0"
 import { Flex, Theme } from "stories"
 
 export default {
-  title: "Flex",
+  title: "Layout/Flex",
   component: Flex,
   decorators: [
     (Story) => (
