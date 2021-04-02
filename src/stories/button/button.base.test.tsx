@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react"
-import { Button, Theme } from "stories"
+import { ButtonBase, Theme } from "stories"
 
 test("should render the component", () => {
   render(
     <Theme>
-      <Button>Test</Button>
+      <ButtonBase>Test</ButtonBase>
     </Theme>
   )
 
