@@ -1,13 +1,7 @@
-# dependencies
 /node_modules
-
-# testing
 /coverage
-
-# production
 /storybook-static
-
-# misc
+/static
 .DS_Store
 .env.local
 .env.development.local
