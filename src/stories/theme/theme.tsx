@@ -1,12 +1,20 @@
 import { FC, VFC } from "react"
 import { ThemeProvider, createGlobalStyle } from "styled-components/macro"
-import { theme } from "theme"
+import { theme } from "stories/theme.definition"
 
 const GlobalStyle = createGlobalStyle<VFC>`
 body {
-  margin: 0;
-    box-sizing: border-box;
-  }
+  font-family: ${theme.fonts.normal};
+  box-sizing: border-box;
+}
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+code {
+  font-family: ${theme.fonts.mono};
+}
 `
 
 export const Theme: FC = ({ children }) => (

@@ -10,7 +10,3 @@ export type { FlexProps } from "./stories"
 
 export { Button } from "./stories"
 export type { ButtonProps } from "./stories"
-
-// Theme
-
-export { theme } from "./theme"
