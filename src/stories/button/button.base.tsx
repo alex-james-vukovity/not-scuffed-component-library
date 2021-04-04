@@ -31,7 +31,7 @@ const sizes = variant({
 })
 
 interface Props {
-  readonly variant?: "small" | "medium" | "large"
+  variant?: "small" | "medium" | "large"
 }
 
 const ButtonBase = styled.button.attrs(({ disabled, onClick }) => ({
