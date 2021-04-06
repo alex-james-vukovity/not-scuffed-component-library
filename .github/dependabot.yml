@@ -8,5 +8,5 @@ updates:
     open-pull-requests-limit: 10
     ignored_updates:
       - match:
-          dependency_name: "*@storybook/"
+          dependency_name: "@storybook/*"
           version_requirement: "6.x"
