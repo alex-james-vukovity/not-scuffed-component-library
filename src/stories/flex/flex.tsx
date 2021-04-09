@@ -1,24 +1,11 @@
 import styled from "styled-components/macro"
-import {
-  space,
-  layout,
-  color,
-  border,
-  position,
-  shadow,
-  flexbox,
-} from "styled-system"
-import { __DEV__, ComponentProps } from "utils"
+import { flexbox, FlexboxProps } from "styled-system"
+import { __DEV__, COMPONENT_PROPS } from "utils"
+import { Box } from "stories/box/box"
 
-const Flex = styled.div`
+const Flex = styled(Box)<FlexboxProps>`
   display: flex;
 
-  ${space};
-  ${layout};
-  ${color};
-  ${border};
-  ${position};
-  ${shadow};
   ${flexbox};
 `
 
@@ -26,5 +13,5 @@ if (__DEV__) {
   Flex.displayName = "Flex"
 }
 
-export type FlexProps = ComponentProps<typeof Flex>
+export type FlexProps = COMPONENT_PROPS<typeof Flex>
 export { Flex }

@@ -1,18 +1,6 @@
 import styled from "styled-components/macro"
-import {
-  compose,
-  space,
-  layout,
-  position,
-  color,
-  display,
-  shadow,
-  border,
-  background,
-  typography,
-  variant,
-} from "styled-system"
-import { __DEV__, ComponentProps } from "utils"
+import { typography, variant } from "styled-system"
+import { __DEV__, COMPONENT_PROPS, COMMON_PROPS, COMMON_TYPES } from "utils"
 
 const sizes = variant({
   variants: {
@@ -30,7 +18,7 @@ const sizes = variant({
   },
 })
 
-interface Props {
+type Props = COMMON_TYPES & {
   variant?: "small" | "medium" | "large"
 }
 
@@ -67,23 +55,14 @@ const ButtonBase = styled.button.attrs(({ disabled, onClick }) => ({
     cursor: default;
   }
 
-  ${compose(
-    space,
-    layout,
-    position,
-    color,
-    display,
-    shadow,
-    border,
-    background,
-    typography
-  )}
+  ${COMMON_PROPS}
   ${sizes}
+  ${typography}
 `
 
 if (__DEV__) {
   ButtonBase.displayName = "ButtonBase"
 }
 
-export type ButtonBaseProps = ComponentProps<typeof ButtonBase>
+export type ButtonBaseProps = COMPONENT_PROPS<typeof ButtonBase>
 export { ButtonBase }

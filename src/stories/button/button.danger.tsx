@@ -1,5 +1,5 @@
 import styled from "styled-components/macro"
-import { __DEV__, ComponentProps } from "utils"
+import { __DEV__, COMPONENT_PROPS } from "utils"
 import { ButtonBase } from "stories/button/button.base"
 import { darken } from "polished"
 
@@ -28,5 +28,5 @@ if (__DEV__) {
   ButtonDanger.displayName = "ButtonDanger"
 }
 
-export type ButtonDangerProps = ComponentProps<typeof ButtonDanger>
+export type ButtonDangerProps = COMPONENT_PROPS<typeof ButtonDanger>
 export { ButtonDanger }

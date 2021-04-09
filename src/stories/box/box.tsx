@@ -1,19 +1,13 @@
 import styled from "styled-components/macro"
-import { space, layout, color, border, position, shadow } from "styled-system"
-import { __DEV__, ComponentProps } from "utils"
+import { __DEV__, COMPONENT_PROPS, COMMON_PROPS, COMMON_TYPES } from "utils"
 
-const Box = styled.div`
-  ${space};
-  ${layout};
-  ${color};
-  ${border};
-  ${position};
-  ${shadow};
+const Box = styled.div<COMMON_TYPES>`
+  ${COMMON_PROPS};
 `
 
 if (__DEV__) {
   Box.displayName = "Box"
 }
 
-export type BoxProps = ComponentProps<typeof Box>
+export type BoxProps = COMPONENT_PROPS<typeof Box>
 export { Box }
