@@ -18,10 +18,10 @@ const sizes = variant({
   },
 })
 
-type Props = COMMON_TYPES &
-  TypographyProps & {
-    variant?: "small" | "medium" | "large"
-  }
+type Props = {
+  variant?: "small" | "medium" | "large"
+} & COMMON_TYPES &
+  TypographyProps
 
 const ButtonBase = styled.button.attrs(({ disabled, onClick }) => ({
   onClick: disabled ? undefined : onClick,
