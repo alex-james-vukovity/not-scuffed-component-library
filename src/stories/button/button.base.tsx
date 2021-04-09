@@ -23,8 +23,9 @@ type Props = {
 } & COMMON_TYPES &
   TypographyProps
 
-const ButtonBase = styled.button.attrs(({ disabled, onClick }) => ({
+const ButtonBase = styled.button.attrs(({ disabled, onClick, type }) => ({
   onClick: disabled ? undefined : onClick,
+  type: type || "submit",
 }))<Props>`
   position: relative;
   display: inline-block;
