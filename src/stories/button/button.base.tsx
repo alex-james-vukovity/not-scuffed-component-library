@@ -1,5 +1,5 @@
 import styled from "styled-components/macro"
-import { typography, variant } from "styled-system"
+import { variant, typography, TypographyProps } from "styled-system"
 import { __DEV__, COMPONENT_PROPS, COMMON_PROPS, COMMON_TYPES } from "utils"
 
 const sizes = variant({
@@ -18,9 +18,10 @@ const sizes = variant({
   },
 })
 
-type Props = COMMON_TYPES & {
-  variant?: "small" | "medium" | "large"
-}
+type Props = COMMON_TYPES &
+  TypographyProps & {
+    variant?: "small" | "medium" | "large"
+  }
 
 const ButtonBase = styled.button.attrs(({ disabled, onClick }) => ({
   onClick: disabled ? undefined : onClick,
