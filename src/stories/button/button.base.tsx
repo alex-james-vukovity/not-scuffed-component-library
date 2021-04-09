@@ -2,7 +2,7 @@ import styled from "styled-components/macro"
 import { variant, typography, TypographyProps } from "styled-system"
 import { __DEV__, COMPONENT_PROPS, COMMON_PROPS, COMMON_TYPES } from "utils"
 
-const sizes = variant({
+const sizeVariants = variant({
   variants: {
     small: {
       padding: "4px 12px",
@@ -57,7 +57,7 @@ const ButtonBase = styled.button.attrs(({ disabled, onClick }) => ({
   }
 
   ${COMMON_PROPS}
-  ${sizes}
+  ${sizeVariants}
   ${typography}
 `
 
