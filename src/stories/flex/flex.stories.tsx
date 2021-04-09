@@ -3,7 +3,6 @@ import { Flex, Theme } from "stories"
 
 export default {
   title: "Layout/Flex",
-  component: Flex,
   decorators: [
     (Story) => (
       <Theme>

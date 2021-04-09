@@ -3,7 +3,6 @@ import { Box, Theme } from "stories"
 
 export default {
   title: "Layout/Box",
-  component: Box,
   decorators: [
     (Story) => (
       <Theme>
