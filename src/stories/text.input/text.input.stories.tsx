@@ -14,6 +14,8 @@ export default {
 
 export const Default = () => <TextInput />
 
+export const Disabled = () => <TextInput disabled value="Example" />
+
 export const WithLabel = () => (
   <FormGroup>
     <FormGroup.Label htmlFor="id">Label</FormGroup.Label>
