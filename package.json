@@ -85,5 +85,8 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
+  },
+  "devDependencies": {
+    "rollup-plugin-delete": "^2.0.0"
   }
 }

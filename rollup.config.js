@@ -3,6 +3,7 @@ import typescript from "@rollup/plugin-typescript"
 import commonjs from "@rollup/plugin-commonjs"
 import resolve from "@rollup/plugin-node-resolve"
 import babel from "@rollup/plugin-babel"
+import del from "rollup-plugin-delete"
 
 const extensions = [".js", ".jsx", ".ts", ".tsx"]
 const formats = ["esm", "umd"]
@@ -32,6 +33,7 @@ const config = {
       },
     }),
     typescript(),
+    del({ targets: "dist/*" }),
   ],
   external: ["react", "react-dom", "styled-components"],
 }
