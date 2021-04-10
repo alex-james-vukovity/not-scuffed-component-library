@@ -4,14 +4,29 @@ import commonjs from "@rollup/plugin-commonjs"
 import resolve from "@rollup/plugin-node-resolve"
 import babel from "@rollup/plugin-babel"
 
+const extensions = [".ts", ".tsx"]
+
 const config = {
   input: "src/index.ts",
-  output: { file: "dist/index.js", format: "esm" },
+  output: {
+    name: "not-scuffed-component-library",
+    file: "dist/index.js",
+    format: "umd",
+    sourcemap: true,
+    globals: {
+      // prettier-ignore
+      "react": "React",
+      "react-dom": "ReactDOM",
+      "styled-components/macro": "styled",
+      "react/jsx-runtime": "jsxRuntime",
+    },
+  },
   plugins: [
     babel({ babelHelpers: "bundled" }),
     commonjs(),
     external(),
     resolve({
+      extensions,
       customResolveOptions: {
         moduleDirectories: ["node_modules"],
       },
