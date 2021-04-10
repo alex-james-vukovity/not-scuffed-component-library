@@ -1,13 +1,13 @@
 import { Meta } from "@storybook/react/types-6-0"
-import { Heading, Theme } from "stories"
+import { Heading, ThemeProvider } from "stories"
 
 export default {
   title: "Typography/Heading",
   decorators: [
     (Story) => (
-      <Theme>
+      <ThemeProvider>
         <Story />
-      </Theme>
+      </ThemeProvider>
     ),
   ],
 } as Meta

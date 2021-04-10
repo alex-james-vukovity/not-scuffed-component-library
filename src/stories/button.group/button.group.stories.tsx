@@ -2,15 +2,15 @@ import { Meta } from "@storybook/react/types-6-0"
 import { ButtonGroup } from "stories/button.group/button.group"
 import { ButtonPrimary } from "stories/button/button.primary"
 import { ButtonDanger } from "stories/button/button.danger"
-import { Theme } from "stories/theme/theme"
+import { ThemeProvider } from "stories/theme/theme"
 
 export default {
   title: "Layout/ButtonGroup",
   decorators: [
     (Story) => (
-      <Theme>
+      <ThemeProvider>
         <Story />
-      </Theme>
+      </ThemeProvider>
     ),
   ],
 } as Meta

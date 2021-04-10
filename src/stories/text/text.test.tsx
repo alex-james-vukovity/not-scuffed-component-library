@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react"
-import { Text, Theme } from "stories"
+import { Text, ThemeProvider } from "stories"
 
 test("should render the component", () => {
   render(
-    <Theme>
+    <ThemeProvider>
       <Text as="p">Test</Text>
-    </Theme>
+    </ThemeProvider>
   )
 
   const component = screen.getByText("Test")

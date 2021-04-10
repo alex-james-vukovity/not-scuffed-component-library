@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react"
-import { TextInput, Theme } from "stories"
+import { TextInput, ThemeProvider } from "stories"
 
 test("should render the component", () => {
   render(
-    <Theme>
+    <ThemeProvider>
       <TextInput />
-    </Theme>
+    </ThemeProvider>
   )
 
   const component = screen.getByRole("textbox")

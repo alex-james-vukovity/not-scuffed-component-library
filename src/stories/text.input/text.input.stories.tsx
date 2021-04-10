@@ -1,13 +1,13 @@
 import { Meta } from "@storybook/react/types-6-0"
-import { TextInput, FormGroup, Theme } from "stories"
+import { TextInput, FormGroup, ThemeProvider } from "stories"
 
 export default {
   title: "Form/TextInput",
   decorators: [
     (Story) => (
-      <Theme>
+      <ThemeProvider>
         <Story />
-      </Theme>
+      </ThemeProvider>
     ),
   ],
 } as Meta

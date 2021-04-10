@@ -1,13 +1,13 @@
 import { Meta } from "@storybook/react/types-6-0"
-import { Flex, Theme } from "stories"
+import { Flex, ThemeProvider } from "stories"
 
 export default {
   title: "Layout/Flex",
   decorators: [
     (Story) => (
-      <Theme>
+      <ThemeProvider>
         <Story />
-      </Theme>
+      </ThemeProvider>
     ),
   ],
 } as Meta

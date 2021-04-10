@@ -1,13 +1,13 @@
 import { Meta } from "@storybook/react/types-6-0"
-import { FormGroup, Theme } from "stories"
+import { FormGroup, ThemeProvider } from "stories"
 
 export default {
   title: "Form/FormGroup",
   decorators: [
     (Story) => (
-      <Theme>
+      <ThemeProvider>
         <Story />
-      </Theme>
+      </ThemeProvider>
     ),
   ],
 } as Meta

@@ -1,6 +1,6 @@
 export { Box } from "./box"
 export { Flex } from "./flex"
-export { Theme } from "./theme"
+export { ThemeProvider } from "./theme"
 export { ButtonDanger, ButtonPrimary, ButtonBase } from "./button"
 export { ButtonGroup } from "./button.group"
 export { theme } from "./theme.definition"

@@ -1,13 +1,13 @@
 import { Meta } from "@storybook/react/types-6-0"
-import { Grid, Theme } from "stories"
+import { Grid, ThemeProvider } from "stories"
 
 export default {
   title: "Layout/Grid",
   decorators: [
     (Story) => (
-      <Theme>
+      <ThemeProvider>
         <Story />
-      </Theme>
+      </ThemeProvider>
     ),
   ],
 } as Meta

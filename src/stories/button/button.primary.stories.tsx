@@ -1,14 +1,14 @@
 import { Meta } from "@storybook/react/types-6-0"
 import { ButtonPrimary } from "stories/button/button.primary"
-import { Theme } from "stories/theme/theme"
+import { ThemeProvider } from "stories/theme/theme"
 
 export default {
   title: "Button/ButtonPrimary",
   decorators: [
     (Story) => (
-      <Theme>
+      <ThemeProvider>
         <Story />
-      </Theme>
+      </ThemeProvider>
     ),
   ],
 } as Meta

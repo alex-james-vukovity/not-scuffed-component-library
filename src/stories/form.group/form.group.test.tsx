@@ -1,13 +1,13 @@
 import { render, screen } from "@testing-library/react"
-import { FormGroup, Theme } from "stories"
+import { FormGroup, ThemeProvider } from "stories"
 
 test("should render the component", () => {
   render(
-    <Theme>
+    <ThemeProvider>
       <FormGroup>
         <FormGroup.Label>Test</FormGroup.Label>
       </FormGroup>
-    </Theme>
+    </ThemeProvider>
   )
 
   const label = screen.getByText("Test")

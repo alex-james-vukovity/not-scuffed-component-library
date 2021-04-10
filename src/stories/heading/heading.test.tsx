@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react"
-import { Heading, Theme } from "stories"
+import { Heading, ThemeProvider } from "stories"
 
 test("should render h2 component", () => {
   render(
-    <Theme>
+    <ThemeProvider>
       <Heading>Test</Heading>
-    </Theme>
+    </ThemeProvider>
   )
 
   const component = screen.getByText("Test")
@@ -16,9 +16,9 @@ test("should render h2 component", () => {
 
 test("should render h1 component", () => {
   render(
-    <Theme>
+    <ThemeProvider>
       <Heading as="h1">Test</Heading>
-    </Theme>
+    </ThemeProvider>
   )
 
   const component = screen.getByText("Test")

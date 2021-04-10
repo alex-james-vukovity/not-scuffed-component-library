@@ -1,13 +1,13 @@
 import { Meta } from "@storybook/react/types-6-0"
-import { Box, Theme } from "stories"
+import { Box, ThemeProvider } from "stories"
 
 export default {
   title: "Layout/Box",
   decorators: [
     (Story) => (
-      <Theme>
+      <ThemeProvider>
         <Story />
-      </Theme>
+      </ThemeProvider>
     ),
   ],
 } as Meta

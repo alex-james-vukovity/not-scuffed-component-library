@@ -18,11 +18,11 @@ code {
 }
 `
 
-const Theme: FC = ({ children }) => (
+const ThemeProvider: FC = ({ children }) => (
   <SCThemeProvider theme={theme}>
     <GlobalStyle />
     {children}
   </SCThemeProvider>
 )
 
-export { Theme }
+export { ThemeProvider }

@@ -10,5 +10,5 @@ export {
   Heading,
   Text,
   TextInput,
-  Theme,
+  ThemeProvider,
 } from "./stories"
