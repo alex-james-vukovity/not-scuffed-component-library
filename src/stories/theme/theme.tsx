@@ -15,9 +15,11 @@ code {
 }
 `
 
-export const Theme: FC = ({ children }) => (
+const Theme: FC = ({ children }) => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
     {children}
   </ThemeProvider>
 )
+
+export { Theme }
