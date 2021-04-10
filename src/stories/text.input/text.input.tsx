@@ -1,11 +1,17 @@
 import styled from "styled-components/macro"
-import { __DEV__, COMPONENT_PROPS, COMMON_PROPS, COMMON_TYPES } from "utils"
-import { typography, TypographyProps } from "styled-system"
+import {
+  __DEV__,
+  COMPONENT_PROPS,
+  COMMON_PROPS,
+  COMMON_TYPES,
+  TYPOGRAPHY_PROPS,
+  TYPOGRAPHY_TYPES,
+} from "utils"
 import { lighten, darken } from "polished"
 
 const TextInput = styled.input.attrs((props) => ({
   type: props.type || "textbox",
-}))<COMMON_TYPES & TypographyProps>`
+}))<COMMON_TYPES & TYPOGRAPHY_TYPES>`
   width: 320px;
   min-height: 34px;
   padding: 6px 12px;
@@ -30,7 +36,7 @@ const TextInput = styled.input.attrs((props) => ({
   }
 
   ${COMMON_PROPS}
-  ${typography}
+  ${TYPOGRAPHY_PROPS}
 `
 
 if (__DEV__) {

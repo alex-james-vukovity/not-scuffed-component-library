@@ -7,6 +7,9 @@ import {
   position,
   shadow,
   background,
+  typography,
+  flexbox,
+  grid,
 } from "styled-system"
 
 export const COMMON_PROPS = compose(
@@ -18,3 +21,9 @@ export const COMMON_PROPS = compose(
   border,
   background
 )
+
+export const TYPOGRAPHY_PROPS = typography
+
+export const FLEX_PROPS = flexbox
+
+export const GRID_PROPS = grid

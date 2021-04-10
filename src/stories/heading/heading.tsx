@@ -1,14 +1,20 @@
 import styled from "styled-components/macro"
-import { typography, TypographyProps } from "styled-system"
-import { __DEV__, COMPONENT_PROPS, COMMON_PROPS, COMMON_TYPES } from "utils"
+import {
+  __DEV__,
+  COMPONENT_PROPS,
+  COMMON_PROPS,
+  COMMON_TYPES,
+  TYPOGRAPHY_PROPS,
+  TYPOGRAPHY_TYPES,
+} from "utils"
 
-const Heading = styled.h2<COMMON_TYPES & TypographyProps>`
+const Heading = styled.h2<COMMON_TYPES & TYPOGRAPHY_TYPES>`
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   font-size: ${({ theme }) => theme.fontSizes[5]};
   margin: ${({ theme }) => theme.space[0]};
 
   ${COMMON_PROPS};
-  ${typography};
+  ${TYPOGRAPHY_PROPS};
 `
 
 if (__DEV__) {

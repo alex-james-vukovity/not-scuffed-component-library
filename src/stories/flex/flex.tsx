@@ -1,12 +1,11 @@
 import styled from "styled-components/macro"
-import { flexbox, FlexboxProps } from "styled-system"
-import { __DEV__, COMPONENT_PROPS } from "utils"
+import { __DEV__, COMPONENT_PROPS, FLEX_PROPS, FLEX_TYPES } from "utils"
 import { Box } from "stories/box/box"
 
-const Flex = styled(Box)<FlexboxProps>`
+const Flex = styled(Box)<FLEX_TYPES>`
   display: flex;
 
-  ${flexbox};
+  ${FLEX_PROPS};
 `
 
 if (__DEV__) {
