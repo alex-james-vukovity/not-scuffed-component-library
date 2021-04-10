@@ -1,8 +1,8 @@
-import babel from "@rollup/plugin-babel"
 import external from "rollup-plugin-peer-deps-external"
-import del from "rollup-plugin-delete"
 import packageJson from "./package.json"
 import typescript from "rollup-plugin-typescript2"
+import commonjs from "@rollup/plugin-commonjs"
+import resolve from "@rollup/plugin-node-resolve"
 
 const config = {
   input: packageJson.source,
@@ -10,15 +10,7 @@ const config = {
     { file: packageJson.main, format: "cjs" },
     { file: packageJson.module, format: "esm" },
   ],
-  plugins: [
-    external(),
-    babel({
-      exclude: "node_modules/**",
-      babelHelpers: "bundled",
-    }),
-    del({ targets: ["dist/*"] }),
-    typescript(),
-  ],
+  plugins: [external(), resolve(), commonjs(), typescript()],
   external: Object.keys(packageJson.peerDependencies || {}),
 }
 
