@@ -9,6 +9,14 @@
   },
   "license": "ISC",
   "author": "Alex James Vukovity",
+  "main": "lib/index.js",
+  "module": "lib-esm/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "lib-esm"
+  ],
   "scripts": {
     "build": "rollup -c",
     "sb": "start-storybook -p 6006 -s public",
