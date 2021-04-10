@@ -1,5 +1,8 @@
 import { FC, VFC } from "react"
-import { ThemeProvider, createGlobalStyle } from "styled-components/macro"
+import {
+  ThemeProvider as SCThemeProvider,
+  createGlobalStyle,
+} from "styled-components/macro"
 import { theme } from "stories/theme.definition"
 
 const GlobalStyle = createGlobalStyle<VFC>`
@@ -16,10 +19,10 @@ code {
 `
 
 const Theme: FC = ({ children }) => (
-  <ThemeProvider theme={theme}>
+  <SCThemeProvider theme={theme}>
     <GlobalStyle />
     {children}
-  </ThemeProvider>
+  </SCThemeProvider>
 )
 
 export { Theme }
