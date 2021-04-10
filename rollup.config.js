@@ -1,17 +1,24 @@
 import external from "rollup-plugin-peer-deps-external"
-import packageJson from "./package.json"
-import typescript from "rollup-plugin-typescript2"
+import typescript from "@rollup/plugin-typescript"
 import commonjs from "@rollup/plugin-commonjs"
 import resolve from "@rollup/plugin-node-resolve"
+import babel from "@rollup/plugin-babel"
 
 const config = {
-  input: packageJson.source,
-  output: [
-    { file: packageJson.main, format: "cjs" },
-    { file: packageJson.module, format: "esm" },
+  input: "src/index.ts",
+  output: { file: "dist/index.js", format: "esm" },
+  plugins: [
+    babel({ babelHelpers: "bundled" }),
+    commonjs(),
+    external(),
+    resolve({
+      customResolveOptions: {
+        moduleDirectories: ["node_modules"],
+      },
+    }),
+    typescript(),
   ],
-  plugins: [external(), resolve(), commonjs(), typescript()],
-  external: Object.keys(packageJson.peerDependencies || {}),
+  external: ["react", "react-dom", "styled-components"],
 }
 
 export default config
